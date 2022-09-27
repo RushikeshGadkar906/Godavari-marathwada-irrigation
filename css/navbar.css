@@ -1,0 +1,255 @@
+/* * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  } */
+
+.nav {
+  height: 80px;
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+  display: inline-block;
+  /* margin-top: 20px; */
+  padding: 10px;
+}
+
+.nav > .nav-header {
+  display: inline;
+  position: relative;
+}
+.navDropdown {
+  /* margin-right: 15px; */
+  background-color: transparent;
+  border: none;
+}
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 6px 0px 0 25px;
+  position: absolute;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 0px 10px 5px 10px;
+  text-decoration: none;
+  color: #000;
+}
+.txtFormat1 {
+  font-size: 11px;
+  font-weight: bold;
+}
+.txtFormat2 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.txtFormat3 {
+  font-size: 17px;
+  font-weight: bold;
+}
+/*   
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  } */
+
+.nav > #nav-check {
+  display: none;
+}
+#topBar,
+#topBar2 {
+  display: none;
+}
+.searchInputBox {
+  height: 26px;
+  font-size: 12px;
+  border-radius: 14px;
+  border: none;
+  padding-left: 16px;
+}
+/* Media Query */
+@media (max-width: 1080px) {
+  .nav {
+    margin: 0;
+    height: 113px;
+  }
+  .searchInputBox {
+    height: 22px;
+    font-size: 9px;
+  }
+
+  .nav > .nav-header > .nav-title {
+    padding: 47px 0px 0 25px;
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    padding: 5px 0px 0 14px;
+  }
+  .navDropdown {
+    /* margin-right: 15px; */
+    background-color: transparent;
+    border: none;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #f2e162;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 111px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    padding: 5px 10px 5px 30px;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  .sepLine {
+    display: none;
+  }
+  #topBar {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    right: 32px;
+    top: 8px;
+  }
+  #topBar2 {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    right: 32px;
+    top: 37px;
+  }
+
+  div#topBar > div,
+  div#topBar2 > div {
+    color: black;
+    float: right;
+  }
+  div#topBar > div > a {
+    color: black;
+    padding: 0 10px 0 10px;
+  }
+  .searchBox {
+    color: black;
+    padding: 4px 10px 0 10px;
+  }
+  #topBar2 > div > a {
+    color: black;
+    padding: 0 10px 0 10px;
+  }
+  .pageSetting1 {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 6px;
+  }
+  .pageSetting2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+  .pageSetting3 {
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
+/* ---------------------------------------- */
+@media (max-width: 525px) {
+  #topBar2{
+    font-size: 10px;
+  }
+  #topBar {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    right: 33px;
+    top: 10px;
+    font-size: 8px;
+  }
+  div#topBar > div > a {
+    color: black;
+    padding: 0 8px 0 8px;
+  }
+  .searchInputBox {
+    height: 13px;
+    font-size: 6px;
+    padding-left: 9px;
+  }
+  .searchBox {
+    color: black;
+    padding: 3px 10px 0 10px;
+  }
+  .navDropdown {
+    background-color: transparent;
+    border: none;
+    margin-top: -1px;
+  }
+  .pageSetting1 {
+    font-size: 6px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .pageSetting2 {
+    font-size: 8px;
+    font-weight: bold;
+    margin-top: 2px;
+  }
+  .pageSetting3 {
+    font-size: 11px;
+    font-weight: bold;
+  }
+  .nav > .nav-header > .nav-title {
+    padding: 54px 0px 0 25px;
+  }
+  .nav > .nav-header > .nav-title > img {
+    height: 34px;
+  }
+}
